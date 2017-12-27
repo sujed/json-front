@@ -1,5 +1,5 @@
 # Hlib
-Made with ES6
+Made with ES6, based on ``` XMLHttpRequest ```
 
 ## Small JavaScript Http Library
 
