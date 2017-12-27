@@ -1,4 +1,4 @@
-# HLib
+# Hlib
 Made with ES6
 
 ## Small JavaScript Http Library
@@ -17,7 +17,8 @@ If response is in JSON format, it will parse it and the response in promise is a
 and if the content type is not JSON
 it will return this 
 ```javascript
-{status:200, body:{//response data}, content_type://here}
+{status:200, body:{//response data},
+content_type:"some format here"}
 ```
 
 ## Usage
