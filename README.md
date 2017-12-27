@@ -20,6 +20,7 @@ it will return this
 {status:200, body:{//response data},
 content_type:"some format here"}
 ```
+The POST and PUT data to send are formated in JSON
 
 ## Usage
 * GET
