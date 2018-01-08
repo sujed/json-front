@@ -11,14 +11,14 @@ Made with ES6, based on ``` XMLHttpRequest ```
 
 If response is in JSON format, it will parse it and the response in promise is an obj that contains
 ```javascript
-{status:200, body:{//parsed JSON here}}
+{status:200, body:{/*parsed JSON here*/}}
 ```
 
 and if the content type is not JSON
 it will return this 
 ```javascript
-{status:200, body:{//response data},
-content_type:"some format here"}
+{status:200, body:{/*response data here*/},
+content_type:/*some format here*/}
 ```
 The POST and PUT data to send are formated in JSON
 
