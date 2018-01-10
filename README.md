@@ -9,18 +9,18 @@ Made with ES6, based on ``` XMLHttpRequest ```
 * PUT
 * DELETE
 
-If response is in JSON format, it will parse it and the response in promise is an obj that contains
+If the response is in JSON format, it will parse it and the response in promise is an obj that contains
 ```javascript
 {status:200, body:{/*parsed JSON here*/}}
 ```
 
 and if the content type is not JSON
-it will return this 
+it will return 
 ```javascript
 {status:200, body:{/*response data here*/},
 content_type:/*some format here*/}
 ```
-The POST and PUT data to send are formated in JSON
+The POST and PUT 'raw data to send' is automaticly formated in JSON
 
 ## Usage
 * GET
@@ -51,5 +51,8 @@ Http.delete(url).then(res => {
 ## Instructions
 1. Inlcude in HTML
 2. Use as shown above
+
+## Future Features
+* Options to send custom headers.
 
 Curently, this is not on any package manager, so to use just download it.
