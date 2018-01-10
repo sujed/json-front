@@ -9,7 +9,7 @@ Made with ES6, based on ``` XMLHttpRequest ```
 * PUT
 * DELETE
 
-If the response is in JSON format, it will parse it and the response in promise is an obj that contains
+If the response is in JSON format, it will parse it and return
 ```javascript
 {status:200, body:{/*parsed JSON here*/}}
 ```
