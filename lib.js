@@ -1,33 +1,28 @@
-class Http {
-    constructor() {}
+const Http = (function () {
 
-    static async get(url) {
-        const s = new Http;
-        return s._send('GET', url)
+    function get(url) {
+        return _send('GET', url)
     }
 
-    static post(url, data) {
-        const s = new Http;
+    function post(url, data) {
         if (!data) {
             throw Error(`No data to send`);
         }
-        return s._send('POST', url, data);
+        return _send('POST', url, data);
     }
 
-    static put(url, data) {
-        const s = new Http;
+    function put(url, data) {
         if (!data) {
             throw Error(`No data to send`);
         }
-        return s._send('PUT', url, data);
+        return _send('PUT', url, data);
     }
 
-    static delete(url) {
-        const s = new Http;
-        return s._send('DELETE', url);
+    function $delete(url) {
+        return _send('DELETE', url);
     }
 
-    _send(method, url, toSend) {
+    function _send(method, url, toSend) {
         return new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
             xhr.open(method, url);
@@ -60,5 +55,10 @@ class Http {
             toSend ? xhr.send(JSON.stringify(toSend)) : xhr.send();
         })
     }
-
-}
+    return {
+        get,
+        post,
+        put,
+        $delete
+    }
+}());
