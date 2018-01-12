@@ -59,6 +59,6 @@ const Http = (function () {
         get,
         post,
         put,
-        $delete
+        delete: $delete
     }
 }());
