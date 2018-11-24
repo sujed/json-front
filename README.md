@@ -1,5 +1,6 @@
 # Hlib
 Made with ES6, based on ``` XMLHttpRequest ```
+For working with JSON data. 
 
 ## Small JavaScript Http Library
 
@@ -25,25 +26,25 @@ The POST and PUT 'raw data to send' is automaticly formated in JSON
 ## Usage
 * GET
 ```javascript
-Http.get(url).then(res => {
+$ht.get(url).then(res => {
 // do magic here.
 });
 ```
 * POST
 ```javascript
-Http.post(url, data).then(res => {
+$ht.post(url, data).then(res => {
 // do magic here.
 });
 ```
 * PUT
 ```javascript
-Http.put(url, data).then(res => {
+$ht.put(url, data).then(res => {
 // do magic here.
 });
 ```
 * DELETE
 ```javascript
-Http.delete(url).then(res => {
+$ht.delete(url).then(res => {
 // do magic here.
 });
 ```

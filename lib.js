@@ -1,4 +1,4 @@
-const _Hlib = (function() {
+(function (global,dependency) {
   function get(url) {
     return _send("GET", url);
   }
@@ -42,27 +42,12 @@ const _Hlib = (function() {
             body: this.response
           });
         }
-        if (
-          this.getResponseHeader("Content-Type").split(" ")[0] ===
-          "application/json;"
-        ) {
-          reject({
-            status: this.target.status,
-            body: JSON.parse(data.target.response)
-          });
-        }
-        reject({
-          status: this.status,
-          body: this.target.response
-        });
       };
       toSend ? xhr.send(JSON.stringify(toSend)) : xhr.send();
     });
   }
-  return {
-    get,
-    post,
-    put,
-    delete: $delete
-  };
-})();
+
+  const $ht = { get, post, put, delete: $delete };
+
+  window.$ht = $ht;
+})(window);
