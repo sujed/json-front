@@ -1,5 +1,5 @@
 {
-  "name": "jsonhttp",
+  "name": "jsonhttp@1.0.0",
   "version": "1.0.0",
   "description": "Small frontend library for working with json data coming from http request.",
   "main": "index.js",
