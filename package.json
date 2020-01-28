@@ -1,0 +1,25 @@
+{
+  "name": "jsonhttp",
+  "version": "1.0.0",
+  "description": "Small frontend library for working with json data coming fron http request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujed/jsonhttp.git"
+  },
+  "keywords": [
+    "json",
+    "http",
+    "librarz",
+    "frontend"
+  ],
+  "author": "Eduardo Sujević",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sujed/jsonhttp/issues"
+  },
+  "homepage": "https://github.com/sujed/jsonhttp#readme"
+}

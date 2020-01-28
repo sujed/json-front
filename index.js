@@ -32,6 +32,7 @@
           "application/json;"
         ) {
           resolve({
+            content_type: this.getResponseHeader("Content-Type"),
             status: this.status,
             body: JSON.parse(this.response)
           });
@@ -50,4 +51,4 @@
   const $ht = { get, post, put, delete: $delete };
 
   window.$ht = $ht;
-})(window);
+})(window,null);

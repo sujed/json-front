@@ -1,9 +1,8 @@
-# Hlib
-Made with ES6, based on ``` XMLHttpRequest ```
-For working with JSON data. 
+# jsonh
+Made with ES6, ``` XMLHttpRequest  and Promise```
+For working with JSON data comming from http request's.
 
-## Small JavaScript Http Library
-
+---
 ## Methods
 * GET
 * POST
@@ -12,16 +11,23 @@ For working with JSON data.
 
 If the response is in JSON format, it will parse it and return
 ```javascript
-{status:200, body:{/*parsed JSON here*/}}
+{
+    content_type: xyz,
+    status:200,
+    body:{/*parsed JSON here*/}
+}
 ```
 
 and if the content type is not JSON
 it will return 
 ```javascript
-{status:200, body:{/*response data here*/},
-content_type:/*some format here*/}
+{
+    content_type:/*some format here*/
+    status:200, 
+    body:{/*response data here*/},
+}
 ```
-The POST and PUT 'raw data to send' is automaticly formated in JSON
+The POST and PUT ```data``` is automatically formated in JSON
 
 ## Usage
 * GET
@@ -52,8 +58,5 @@ $ht.delete(url).then(res => {
 ## Instructions
 1. Inlcude in HTML
 2. Use as shown above
-
-## Future Features
-* Options to send custom headers.
-
-Curently, this is not on any package manager, so to use just download it.
+---
+Licence MIT
