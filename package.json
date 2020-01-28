@@ -1,7 +1,7 @@
 {
   "name": "jsonhttp",
   "version": "1.0.0",
-  "description": "Small frontend library for working with json data coming fron http request.",
+  "description": "Small frontend library for working with json data coming from http request.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
