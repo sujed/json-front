@@ -1,4 +1,4 @@
-# jsonh
+# jsonhttp
 Made with ES6, ``` XMLHttpRequest  and Promise```
 For working with JSON data comming from http request's.
 
