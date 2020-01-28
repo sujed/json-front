@@ -50,5 +50,5 @@
 
   const $ht = { get, post, put, delete: $delete };
 
-  window.$ht = $ht;
+  window.$jf = $jf;
 })(window,null);

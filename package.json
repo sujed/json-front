@@ -1,5 +1,5 @@
 {
-  "name": "jsonhttp@1.0.0",
+  "name": "json-front",
   "version": "1.0.0",
   "description": "Small frontend library for working with json data coming from http request.",
   "main": "index.js",
@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sujed/jsonhttp.git"
+    "url": "git+https://github.com/sujed/json-front.git"
   },
   "keywords": [
     "json",
     "http",
-    "librarz",
+    "library",
     "frontend"
   ],
   "author": "Eduardo Sujević",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sujed/jsonhttp/issues"
+    "url": "https://github.com/sujed/json-front/issues"
   },
-  "homepage": "https://github.com/sujed/jsonhttp#readme"
+  "homepage": "https://github.com/sujed/json-front#readme"
 }

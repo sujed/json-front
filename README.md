@@ -1,4 +1,4 @@
-# jsonhttp
+# json-front
 Made with ES6, ``` XMLHttpRequest  and Promise```
 For working with JSON data comming from http request's.
 
@@ -32,25 +32,25 @@ The POST and PUT ```data``` is automatically formated in JSON
 ## Usage
 * GET
 ```javascript
-$ht.get(url).then(res => {
+$jf.get(url).then(res => {
 // do magic here.
 });
 ```
 * POST
 ```javascript
-$ht.post(url, data).then(res => {
+$jf.post(url, data).then(res => {
 // do magic here.
 });
 ```
 * PUT
 ```javascript
-$ht.put(url, data).then(res => {
+$jf.put(url, data).then(res => {
 // do magic here.
 });
 ```
 * DELETE
 ```javascript
-$ht.delete(url).then(res => {
+$jf.delete(url).then(res => {
 // do magic here.
 });
 ```
