@@ -48,7 +48,7 @@
     });
   }
 
-  const $ht = { get, post, put, delete: $delete };
+  const $jf = { get, post, put, delete: $delete };
 
   window.$jf = $jf;
 })(window,null);
