@@ -1,72 +1,97 @@
 # json-front
-Made with ES6, ``` XMLHttpRequest  and Promise```
-For working with JSON data coming from http request's.
+
+Made with ES6, `XMLHttpRequest and Promise`
+For working with JSON data, in the browser, coming from http request.
 
 ---
-## Methods
-* GET
-* POST
-* PUT
-* DELETE
 
-If the response is in JSON format, it will parse it and return
+## Methods
+
+- GET
+- POST
+- PUT
+- DELETE
+
+If the response is in JSON, it will be parsed and returned
+
 ```javascript
 {
-    content_type: xyz,
+    content_type: 'application/json',
     status: 200,
     body:{ /*parsed JSON here*/ }
 }
 ```
 
 and if the content type is not JSON
-it will return 
+it will return
+
 ```javascript
 {
     content_type: xyz
-    status: 200, 
+    status: 200,
     body:{ /*response data here*/ },
 }
 ```
-The POST and PUT ```data``` is automatically formated in JSON
+
+The POST and PUT `data` is automatically formated in JSON,
+so it can be passed just as Javascript `object`
 
 ## Usage
-* GET
+
+- GET
+
 ```javascript
 $jf.get(url).then(res => {
-    // do magic here.
+  // do magic here.
 });
 ```
-* POST
+
+- POST
+
 ```javascript
 $jf.post(url, data).then(res => {
-    // do magic here.
+  // do magic here.
 });
 ```
-* PUT
+
+- PUT
+
 ```javascript
 $jf.put(url, data).then(res => {
-    // do magic here.
+  // do magic here.
 });
 ```
-* DELETE
+
+- DELETE
+
 ```javascript
 $jf.delete(url).then(res => {
-    // do magic here.
+  // do magic here.
 });
 ```
+
 ---
-### Example
+
+### Examples
+
 ```html
 <script src="path-to-the-package"></script>
 <script>
-    //Get users array from jsonplaceholder
-    $jf.get("https://jsonplaceholder.typicode.com/users").then(res => {
-        //only return users name.
-        const users = res.body.map(user => user.name);
-    });
-</script>
+  //GET users array from jsonplaceholder
+  $jf.get("https://jsonplaceholder.typicode.com/users").then(res => {
+    //only return users name.
+    const users = res.body.map(user => user.name);
+  });
 
+  //POST
+  $jf.post("https://jsonplaceholder.typicode.com/posts",{title:"title"}).then(res => {
+      if(res.status === 201/*Created*/){
+          //do something
+      }
+  });
+</script>
 ```
 
 ---
-Licence MIT
+
+License MIT
