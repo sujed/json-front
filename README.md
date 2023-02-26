@@ -40,7 +40,9 @@ so it can be passed just as Javascript `object`
 - GET
 
 ```javascript
-$jf.get(url).then(res => {
+import { get } from "json-front";
+
+get(url).then((res) => {
   // do magic here.
 });
 ```
@@ -48,7 +50,9 @@ $jf.get(url).then(res => {
 - POST
 
 ```javascript
-$jf.post(url, data).then(res => {
+import { post } from "json-front";
+
+post(url, data).then((res) => {
   // do magic here.
 });
 ```
@@ -56,7 +60,9 @@ $jf.post(url, data).then(res => {
 - PUT
 
 ```javascript
-$jf.put(url, data).then(res => {
+import { put } from "json-front";
+
+put(url, data).then((res) => {
   // do magic here.
 });
 ```
@@ -64,7 +70,9 @@ $jf.put(url, data).then(res => {
 - DELETE
 
 ```javascript
-$jf.delete(url).then(res => {
+import { remove } from "json-front";
+
+remove(url).then((res) => {
   // do magic here.
 });
 ```
@@ -73,22 +81,23 @@ $jf.delete(url).then(res => {
 
 ### Examples
 
-```html
-<script src="path-to-the-package"></script>
-<script>
-  //GET users array from jsonplaceholder
-  $jf.get("https://jsonplaceholder.typicode.com/users").then(res => {
-    //only return users name.
-    const users = res.body.map(user => user.name);
-  });
+```javascript
+import { get, post } from "json-front";
 
-  //POST
-  $jf.post("https://jsonplaceholder.typicode.com/posts",{title:"title"}).then(res => {
-      if(res.status === 201/*Created*/){
-          //do something
-      }
-  });
-</script>
+//GET users array from jsonplaceholder
+get("https://jsonplaceholder.typicode.com/users").then((res) => {
+  //only return users name.
+  const users = res.body.map((user) => user.name);
+});
+
+//POST
+post("https://jsonplaceholder.typicode.com/posts", { title: "title" }).then(
+  (res) => {
+    if (res.status === 201 /*Created*/) {
+      //do something
+    }
+  }
+);
 ```
 
 ---
