@@ -1,7 +1,6 @@
 # json-front
 
-Made with ES6, `XMLHttpRequest and Promise`
-For working with JSON data, in the browser, coming from http request.
+Made with ES6, `XMLHttpRequest and Promise` for working with JSON data, in the browser.
 
 ---
 
