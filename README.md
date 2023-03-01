@@ -79,7 +79,41 @@ remove(url, headers).then((res) => {
 
 ---
 
-### Examples
+It is also possible to create request instances that are allowing reuse of requests and headers against an API
+
+```javascript
+
+// Define target API base url(required) and headers(optional) if needed
+const jsonPlaceholderAPI = createInstance({baseUrl: "https://jsonplaceholder.typicode.com", baseHeaders: { "Ping":"Pong" }})
+
+// another instance
+const myVeryCoolAPI = createInstance({baseUrl: "https://my.cool.api", baseHeaders: { "Meow":"woof" }})
+
+// it is also possible to extend base headers if needed
+const extendedBaseHeaders = { Pong:"Ping" }
+
+jsonPlaceholderAPI.get("/users", extendedBaseHeaders).then((res) => {
+  //only return users name.
+  const users = res.body.map((user) => user.name);
+});
+
+jsonPlaceholderAPI.post("/posts", { title: "title" }, extendedBaseHeaders).then(
+  (res) => {
+    if (res.status === 201 /*Created*/) {
+      //do something
+    }
+  }
+);
+
+myVeryCoolAPI.post("/coolEndpoints", {cool:'daata'}).then(res => {
+  return res
+})
+
+```
+
+### General Examples
+
+These methods ara always available and are independent of any existing instances
 
 ```javascript
 import { get, post } from "json-front";
