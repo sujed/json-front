@@ -42,7 +42,7 @@ so it can be passed just as Javascript `object`
 ```javascript
 import { get } from "json-front";
 
-get(url).then((res) => {
+get(url,headers).then((res) => {
   // do magic here.
 });
 ```
@@ -52,7 +52,7 @@ get(url).then((res) => {
 ```javascript
 import { post } from "json-front";
 
-post(url, data).then((res) => {
+post(url, data, headers).then((res) => {
   // do magic here.
 });
 ```
@@ -62,7 +62,7 @@ post(url, data).then((res) => {
 ```javascript
 import { put } from "json-front";
 
-put(url, data).then((res) => {
+put(url, data, headers).then((res) => {
   // do magic here.
 });
 ```
@@ -72,7 +72,7 @@ put(url, data).then((res) => {
 ```javascript
 import { remove } from "json-front";
 
-remove(url).then((res) => {
+remove(url, headers).then((res) => {
   // do magic here.
 });
 ```
@@ -84,14 +84,18 @@ remove(url).then((res) => {
 ```javascript
 import { get, post } from "json-front";
 
+const headers = {
+  "This-IS":"SPARTA!"
+}
+
 //GET users array from jsonplaceholder
-get("https://jsonplaceholder.typicode.com/users").then((res) => {
+get("https://jsonplaceholder.typicode.com/users", headers).then((res) => {
   //only return users name.
   const users = res.body.map((user) => user.name);
 });
 
 //POST
-post("https://jsonplaceholder.typicode.com/posts", { title: "title" }).then(
+post("https://jsonplaceholder.typicode.com/posts", { title: "title" }, headers).then(
   (res) => {
     if (res.status === 201 /*Created*/) {
       //do something
