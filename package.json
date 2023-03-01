@@ -1,6 +1,6 @@
 {
   "name": "json-front",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Small frontend library for working with json data",
   "main": "index.js",
   "scripts": {
