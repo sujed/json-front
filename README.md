@@ -82,6 +82,7 @@ remove(url, headers).then((res) => {
 It is also possible to create request instances that are allowing reuse of requests and headers against an API
 
 ```javascript
+import { createInstance } from 'json-front'
 
 // Define target API base url(required) and headers(optional) if needed
 const jsonPlaceholderAPI = createInstance({baseUrl: "https://jsonplaceholder.typicode.com", baseHeaders: { "Ping":"Pong" }})
