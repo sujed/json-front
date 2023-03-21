@@ -6,14 +6,14 @@ export const post = (url, data, headers) => {
   if (!data) {
     throw Error(`No data to send`);
   }
-  return _send({ method: "POST", url, data, headers });
+  return _send({ method: "POST", url, toSend: data, headers });
 };
 
 export const put = (url, data, headers) => {
   if (!data) {
     throw Error(`No data to send`);
   }
-  return _send({ method: "PUT", url, data, headers });
+  return _send({ method: "PUT", url, toSend: data, headers });
 };
 
 export const remove = (url, headers) => {
